@@ -8,6 +8,7 @@ with pkgs.coqPackages_8_17; [
   flocq
   interval
   vcfloat
+  LAProof
   mathcomp
   mathcomp-zify
   mathcomp-algebra-tactics
