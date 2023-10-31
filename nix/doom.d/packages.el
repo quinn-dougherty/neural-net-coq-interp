@@ -1,4 +1,3 @@
-(package! multi-term)
 (package! envrc)
 (package! pdf-tools)
 (package! all-the-icons)

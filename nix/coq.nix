@@ -2,7 +2,7 @@
 with pkgs.coqPackages_8_17; [
   pkgs.ocaml
   pkgs.dune_3
-  coq
+  pkgs.coq_8_17
   coq-lsp
   coq-record-update
   flocq

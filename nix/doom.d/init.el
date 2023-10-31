@@ -12,6 +12,7 @@
  direnv
  magit
  make
+ cmake
  :emacs
  dired
  :lang

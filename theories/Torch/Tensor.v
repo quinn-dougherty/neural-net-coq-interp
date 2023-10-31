@@ -1331,7 +1331,7 @@ Definition diagonal {b} {s : Shape b} {r c} {A}
 #[global] Arguments diagonal {b%nat s%shape} {r c}%uint63 {A%type_scope} {offset}%sint63 input%tensor.
 
 Definition coer_tensor {r s A B} {coerAB : has_coer A B} : @tensor r s A -> @tensor r s B
-  := Tensor.map coer.
+  := map coer.
 #[export] Set Warnings Append "-uniform-inheritance,-ambiguous-paths".
 #[local] Set Warnings Append "-unsupported-attributes".
 #[export] Coercion coer_tensor : tensor >-> tensor.

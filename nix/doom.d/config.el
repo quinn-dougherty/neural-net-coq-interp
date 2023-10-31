@@ -10,3 +10,6 @@
 (custom-set-variables '(coq-project-filename "_CoqProjectDune"))
 
 (add-hook `pdf-view-mode-hook `pdf-view-themed-minor-mode)
+
+(envrc-global-mode)
+(direnv-mode)
