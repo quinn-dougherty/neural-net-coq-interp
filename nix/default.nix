@@ -17,8 +17,9 @@
         codium = shell { text-editor = [ vscodium ]; };
         coq = shell { text-editor = [ doom-emacs vscodium ]; };
       };
-      packages.coq-neural-net-interp = pkgs.stdenv.mkDerivation {
-        name = "coq-neural-net-interp-compile";
+      packages = {
+        coq-nn-dune = pkgs.stdenv.mkDerivation {
+        name = "coq-neural-net-interp-compile-dune";
         buildInputs = (shell { }).buildInputs;
         src = ./..;
         buildPhase = ''
@@ -28,6 +29,18 @@
           mkdir -p $out
           cp -r _build/* $out
         '';
+        };
+        coq-nn = pkgs.stdenv.mkDerivation {
+          name = "coq-neural-net-interp-compile-make";
+          buildInputs = (shell {}).buildInputs;
+          src = ./..;
+          buildPhase = "make";
+          installPhase = ''
+            mkdir -p $out
+            cp -r theories/* $out
+          '';
+        };
       };
+
     };
 }

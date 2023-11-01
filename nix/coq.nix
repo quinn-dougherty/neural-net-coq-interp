@@ -1,5 +1,6 @@
 { pkgs }:
 with pkgs.coqPackages_8_17; [
+  pkgs.gnumake
   pkgs.ocaml
   pkgs.dune_3
   pkgs.coq_8_17
